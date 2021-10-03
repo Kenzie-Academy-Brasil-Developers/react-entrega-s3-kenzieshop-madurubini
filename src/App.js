@@ -1,14 +1,24 @@
-import logo from "./logo.svg";
 import "./App.css";
-import Products from "./components/Products";
-import Cart from "./components/Cart";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import Routes from "./routes";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Products />
-        <Cart />
+        <ToastContainer
+          position="top-right"
+          autoClose={1500}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
+        <Routes />
       </header>
     </div>
   );
