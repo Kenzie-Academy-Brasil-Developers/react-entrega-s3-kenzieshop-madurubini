@@ -4,6 +4,8 @@ import {
   removeFromCartThunk,
 } from "../../store/modules/cart/thunks";
 
+import { IoRemoveCircleSharp } from "react-icons/io5";
+
 import "./style.css";
 
 const Product = ({ product, isRemovable = false }) => {
@@ -18,12 +20,18 @@ const Product = ({ product, isRemovable = false }) => {
         <h3>{name}</h3>
         <h3>R$ {price.toFixed(2)}</h3>
         {isRemovable ? (
-          <button onClick={() => dispatch(removeFromCartThunk(id))}>
-            Remover
+          <button
+            className="RemoveButton"
+            onClick={() => dispatch(removeFromCartThunk(id))}
+          >
+            <IoRemoveCircleSharp />
           </button>
         ) : (
-          <button onClick={() => dispatch(addToCartThunk(product))}>
-            Adicionar
+          <button
+            className="BuyButton"
+            onClick={() => dispatch(addToCartThunk(product))}
+          >
+            Comprar
           </button>
         )}
       </div>

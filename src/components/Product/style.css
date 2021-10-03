@@ -1,6 +1,5 @@
-li {
-  width: 33%;
-  min-width: 25%;
+.Card {
+  min-width: 300px;
   display: flex;
   background-color: white;
   padding: 5px;
@@ -21,6 +20,33 @@ img {
   width: 50%;
 }
 
-h3 {
-  font-size: 16px;
+button {
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  margin: 1%;
+  padding: 5px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+button :hover {
+  filter: brightness(0.9);
+}
+
+.RemoveButton {
+  color: red;
+  border: none;
+}
+
+.BuyButton {
+  font-size: 20px;
+}
+
+@media (max-width: 425px) {
+  .Card {
+    min-width: 150px;
+    border: 1px solid red;
+  }
 }

@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import Product from "../Product";
+import "./style.css";
 
 const Cart = () => {
   const cart = useSelector((store) => store.cart);
@@ -9,14 +10,17 @@ const Cart = () => {
   }, 0);
 
   return (
-    <div>
-      <ul>
+    <div className="Cart">
+      <ul className="List">
         {cart.map((product) => (
           <Product key={product.id} product={product} isRemovable></Product>
         ))}
       </ul>
-      <p>Valor total: {calcPrice} </p>
-      <p>Total de produtos {cart.length}</p>
+      <div className="TotalCart">
+        <h3>Resumo da Compra</h3>
+        <p>Total de produtos: {cart.length}</p>
+        <p>Valor total: R$ {calcPrice.toFixed(2)} </p>
+      </div>
     </div>
   );
 };
