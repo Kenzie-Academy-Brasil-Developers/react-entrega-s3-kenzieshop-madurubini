@@ -25,9 +25,15 @@ const initialState = [
   },
   {
     id: 5,
-    name: "Kit Gin Tônica Preto 8 Especiarias",
-    price: 135.9,
-    image: "https://m.media-amazon.com/images/I/81C7-GXY-VS._AC_SL1500_.jpg",
+    name: "Gin Beefeater",
+    price: 89.9,
+    image: "https://m.media-amazon.com/images/I/71VZ2CY4UMS._AC_SL1500_.jpg",
+  },
+  {
+    id: 6,
+    name: "Gin Beefeater Pink",
+    price: 110.99,
+    image: "https://m.media-amazon.com/images/I/712cNxpl5hS._AC_SL1500_.jpg",
   },
 ];
 

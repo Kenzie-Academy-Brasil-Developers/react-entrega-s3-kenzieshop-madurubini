@@ -6,7 +6,7 @@ export const addToCartThunk = (product) => {
     const list = JSON.parse(localStorage.getItem("cart")) || [];
     list.push(product);
     localStorage.setItem("cart", JSON.stringify(list));
-    toast.success("Uhul");
+    toast.success("Produto adicionado ao carrinho");
     dispatch(addToCart(product));
   };
 };
